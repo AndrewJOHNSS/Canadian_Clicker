@@ -154,6 +154,10 @@ namespace Canadian_Clicker
                 finalupgrade = clickerpower * 2;
                 clickerpower = finalupgrade;
             }
+            if (clickerpower == 512)
+            {
+                powerup2Xlabel.Enabled = false;
+            }
         }
 
         private void powerupIglooLabel_Click(object sender, EventArgs e)
@@ -222,6 +226,30 @@ namespace Canadian_Clicker
             timsMilkAndSugar2X.Enabled = true;
             hockeypowerupLabel.Enabled = true;
             floridianMooseRider10x.Enabled=true;
+        }
+
+        private void winButton_Click(object sender, EventArgs e)
+        {
+            if (Ehamount >= 100000000 && clickerpower == 512)
+            {
+                costtowinLabel.Text = $"What was the point? like, are you THAT bored?";
+                powerupIglooLabel.Visible = false;
+                timsMilkAndSugar2X.Visible = false;
+                hockeypowerupLabel.Visible = false;
+                floridianMooseRider10x.Visible = false;
+                powerup2Xlabel.Visible = false;
+                numberofhockeyLabel.Visible = false;
+                numberofiglooLabel.Visible = false;
+                numberofmooseLabel.Visible = false;
+                numberofsnowplowLabel.Visible = false;
+                numberoftimsLabel.Visible = false;
+                buyhockeyplayerButton.Visible = false;
+                buyiglooButton.Visible = false;
+                buymooseriderButton.Visible = false;
+                buysnowplowButton.Visible = false;
+                buytimsButton.Visible = false;
+                winButton.Visible = false;
+            }
         }
     }
 }

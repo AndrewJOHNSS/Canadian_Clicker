@@ -49,12 +49,14 @@
             this.mapleLeafImage = new System.Windows.Forms.Label();
             this.clickpowerLabel = new System.Windows.Forms.Label();
             this.resetButton = new System.Windows.Forms.Button();
+            this.winButton = new System.Windows.Forms.Button();
+            this.costtowinLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // scoreLabel
             // 
             this.scoreLabel.AutoSize = true;
-            this.scoreLabel.Location = new System.Drawing.Point(42, 41);
+            this.scoreLabel.Location = new System.Drawing.Point(51, 178);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(67, 13);
             this.scoreLabel.TabIndex = 1;
@@ -229,7 +231,7 @@
             // clickpowerLabel
             // 
             this.clickpowerLabel.AutoSize = true;
-            this.clickpowerLabel.Location = new System.Drawing.Point(51, 204);
+            this.clickpowerLabel.Location = new System.Drawing.Point(51, 223);
             this.clickpowerLabel.Name = "clickpowerLabel";
             this.clickpowerLabel.Size = new System.Drawing.Size(84, 13);
             this.clickpowerLabel.TabIndex = 17;
@@ -245,12 +247,33 @@
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
+            // winButton
+            // 
+            this.winButton.Location = new System.Drawing.Point(210, 36);
+            this.winButton.Name = "winButton";
+            this.winButton.Size = new System.Drawing.Size(75, 23);
+            this.winButton.TabIndex = 19;
+            this.winButton.Text = "Win Button";
+            this.winButton.UseVisualStyleBackColor = true;
+            this.winButton.Click += new System.EventHandler(this.winButton_Click);
+            // 
+            // costtowinLabel
+            // 
+            this.costtowinLabel.Location = new System.Drawing.Point(126, 9);
+            this.costtowinLabel.Name = "costtowinLabel";
+            this.costtowinLabel.Size = new System.Drawing.Size(240, 29);
+            this.costtowinLabel.TabIndex = 20;
+            this.costtowinLabel.Text = "Power: 512 and 100,000,000 extra eh?\'s to truly be Canadian";
+            this.costtowinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(507, 450);
+            this.Controls.Add(this.costtowinLabel);
+            this.Controls.Add(this.winButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.clickpowerLabel);
             this.Controls.Add(this.numberofmooseLabel);
@@ -299,6 +322,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label clickpowerLabel;
         private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Button winButton;
+        private System.Windows.Forms.Label costtowinLabel;
     }
 }
 
