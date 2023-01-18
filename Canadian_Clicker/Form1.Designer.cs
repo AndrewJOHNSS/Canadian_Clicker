@@ -51,6 +51,7 @@
             this.resetButton = new System.Windows.Forms.Button();
             this.winButton = new System.Windows.Forms.Button();
             this.costtowinLabel = new System.Windows.Forms.Label();
+            this.endprogramButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // scoreLabel
@@ -266,12 +267,23 @@
             this.costtowinLabel.Text = "Power: 512 and 100,000,000 extra eh?\'s to truly be Canadian";
             this.costtowinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // endprogramButton
+            // 
+            this.endprogramButton.Location = new System.Drawing.Point(12, 47);
+            this.endprogramButton.Name = "endprogramButton";
+            this.endprogramButton.Size = new System.Drawing.Size(75, 23);
+            this.endprogramButton.TabIndex = 21;
+            this.endprogramButton.Text = "END";
+            this.endprogramButton.UseVisualStyleBackColor = true;
+            this.endprogramButton.Click += new System.EventHandler(this.endprogramButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(507, 450);
+            this.Controls.Add(this.endprogramButton);
             this.Controls.Add(this.costtowinLabel);
             this.Controls.Add(this.winButton);
             this.Controls.Add(this.resetButton);
@@ -324,6 +336,7 @@
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Button winButton;
         private System.Windows.Forms.Label costtowinLabel;
+        private System.Windows.Forms.Button endprogramButton;
     }
 }
 

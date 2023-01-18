@@ -50,16 +50,18 @@ namespace Canadian_Clicker
         public Form1()
         {
             InitializeComponent();
+            endprogramButton.Enabled = false;
+            endprogramButton.Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             scoreLabel.Text = $"eh? Amount:{Ehamount}";
-            numberofiglooLabel.Text = $" Cost:25  Total Owned:{iglooamount}";
-            numberofsnowplowLabel.Text = $"Cost:50   Total Owned:{plowamount}";
-            numberoftimsLabel.Text = $"Cost:100  Total Owned:{timsamount}";
-            numberofhockeyLabel.Text =  $"Cost:150  Total Owned:{hockeyamount}";
-            numberofmooseLabel.Text = $"Cost:250   Total Owned:{rideramount}";
+            numberofiglooLabel.Text = $" Cost:{igloovalue}  Total Owned:{iglooamount}";
+            numberofsnowplowLabel.Text = $"Cost:{plowvalue}   Total Owned:{plowamount}";
+            numberoftimsLabel.Text = $"Cost:{timsvalue}  Total Owned:{timsamount}";
+            numberofhockeyLabel.Text =  $"Cost:{hockeyvalue}  Total Owned:{hockeyamount}";
+            numberofmooseLabel.Text = $"Cost:{ridervalue}   Total Owned:{rideramount}";
 
             clickpowerLabel.Text = $"Click POWER: {clickerpower}";
 
@@ -104,7 +106,7 @@ namespace Canadian_Clicker
 
         private void buyiglooButton_Click(object sender, EventArgs e)
         {
-            if (Ehamount >= 25)
+            if (Ehamount >= igloovalue)
             {
                 iglooamount++;
                 finaladd = Ehamount;
@@ -115,7 +117,7 @@ namespace Canadian_Clicker
 
         private void buysnowplowButton_Click(object sender, EventArgs e)
         {
-            if (Ehamount >= 50)
+            if (Ehamount >= plowvalue)
             {
                 plowamount++;
                 finaladd = Ehamount;
@@ -126,7 +128,7 @@ namespace Canadian_Clicker
 
         private void buytimsButton_Click(object sender, EventArgs e)
         {
-            if (Ehamount >= 100)
+            if (Ehamount >= timsvalue)
             {
                 timsamount++;
                 finaladd = Ehamount;
@@ -137,7 +139,7 @@ namespace Canadian_Clicker
 
         private void buyhockeyplayerButton_Click(object sender, EventArgs e)
         {
-            if (Ehamount >= 150)
+            if (Ehamount >= hockeyvalue)
             {
                 hockeyamount++;
                 finaladd = Ehamount;
@@ -148,7 +150,7 @@ namespace Canadian_Clicker
 
         private void buymooseriderButton_Click(object sender, EventArgs e)
         {
-            if (Ehamount >= 250)
+            if (Ehamount >= ridervalue)
             {
                 rideramount++;
                 finaladd = Ehamount;
@@ -251,7 +253,7 @@ namespace Canadian_Clicker
         {
             if (Ehamount >= 100000000 && clickerpower == 512)
             {
-                costtowinLabel.Text = $"What was the point? like, are you THAT bored?";
+                costtowinLabel.Text = $"What was the point? like, are you THAT bored? Congrats, you are a Canadian";
                 powerupIglooLabel.Visible = false;
                 timsMilkAndSugar2X.Visible = false;
                 hockeypowerupLabel.Visible = false;
@@ -268,8 +270,15 @@ namespace Canadian_Clicker
                 buysnowplowButton.Visible = false;
                 buytimsButton.Visible = false;
                 winButton.Visible = false;
+                endprogramButton.Visible = true;
+                endprogramButton.Enabled = true;
                 templebellsound.Play();
             }
+        }
+
+        private void endprogramButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
