@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Canadian_Clicker
 {
@@ -41,6 +42,11 @@ namespace Canadian_Clicker
         int hockeyvalue = 150;
         int ridervalue = 250;
 
+        SoundPlayer button1sound = new SoundPlayer(Properties.Resources.Door_Close_SoundBible_com_1305692306);
+        SoundPlayer button2sound = new SoundPlayer(Properties.Resources.Button_Push_Mike_Koenig_1659525069);
+        SoundPlayer button3sound = new SoundPlayer(Properties.Resources.Click2_Sebastian_759472264);
+        SoundPlayer staticsound = new SoundPlayer(Properties.Resources.Radio_Static_SoundBible_com_629277574);
+        SoundPlayer templebellsound = new SoundPlayer(Properties.Resources.Temple_Bell_SoundBible_com_756181215);
         public Form1()
         {
             InitializeComponent();
@@ -93,6 +99,7 @@ namespace Canadian_Clicker
         {
             finaladd = Ehamount;
             Ehamount = finaladd + clickerpower;
+            button3sound.Play();
         }
 
         private void buyiglooButton_Click(object sender, EventArgs e)
@@ -102,6 +109,7 @@ namespace Canadian_Clicker
                 iglooamount++;
                 finaladd = Ehamount;
                 Ehamount = finaladd - igloovalue;
+                button1sound.Play();
             }
         }
 
@@ -112,6 +120,7 @@ namespace Canadian_Clicker
                 plowamount++;
                 finaladd = Ehamount;
                 Ehamount = finaladd - plowvalue;
+                button1sound.Play();
             }
         }
 
@@ -122,6 +131,7 @@ namespace Canadian_Clicker
                 timsamount++;
                 finaladd = Ehamount;
                 Ehamount = finaladd - timsvalue;
+                button1sound.Play();
             }
         }
 
@@ -132,6 +142,7 @@ namespace Canadian_Clicker
                 hockeyamount++;
                 finaladd = Ehamount;
                 Ehamount = finaladd - hockeyvalue;
+                button1sound.Play();
             }
         }
 
@@ -142,6 +153,7 @@ namespace Canadian_Clicker
                 rideramount++;
                 finaladd = Ehamount;
                 Ehamount = finaladd - ridervalue;
+                button1sound.Play();
             }
         }
 
@@ -153,6 +165,7 @@ namespace Canadian_Clicker
                 Ehamount = finaladd - 1000;
                 finalupgrade = clickerpower * 2;
                 clickerpower = finalupgrade;
+                button1sound.Play();
             }
             if (clickerpower == 512)
             {
@@ -169,6 +182,7 @@ namespace Canadian_Clicker
                 finalupgrade = igloopower * 2;
                 igloopower = finalupgrade;
                 powerupIglooLabel.Enabled = false;
+                button2sound.Play();
             }
         }
 
@@ -181,6 +195,7 @@ namespace Canadian_Clicker
                 finalupgrade = timspower * 2;
                 timspower = finalupgrade;
                 timsMilkAndSugar2X.Enabled = false;
+                button2sound.Play();
             }
         }
 
@@ -193,6 +208,7 @@ namespace Canadian_Clicker
                 finalupgrade = hockeypower * 3;
                 hockeypower = finalupgrade;
                 hockeypowerupLabel.Enabled=false;
+                button2sound.Play();
             }
         }
 
@@ -205,6 +221,7 @@ namespace Canadian_Clicker
                 finalupgrade = riderpower * 10;
                 riderpower = finalupgrade;
                 floridianMooseRider10x.Enabled = false;
+                button2sound.Play();
             }
         }
 
@@ -226,6 +243,8 @@ namespace Canadian_Clicker
             timsMilkAndSugar2X.Enabled = true;
             hockeypowerupLabel.Enabled = true;
             floridianMooseRider10x.Enabled=true;
+            powerup2Xlabel.Enabled=true;
+            staticsound.Play();
         }
 
         private void winButton_Click(object sender, EventArgs e)
@@ -249,6 +268,7 @@ namespace Canadian_Clicker
                 buysnowplowButton.Visible = false;
                 buytimsButton.Visible = false;
                 winButton.Visible = false;
+                templebellsound.Play();
             }
         }
     }

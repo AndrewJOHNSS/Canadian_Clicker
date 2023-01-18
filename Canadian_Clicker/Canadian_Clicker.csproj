@@ -83,5 +83,20 @@
   <ItemGroup>
     <None Include="Resources\Maple_leaf_transparent.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Push-Mike_Koenig-1659525069.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Door Close-SoundBible.com-1305692306.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Click2-Sebastian-759472264.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Radio Static-SoundBible.com-629277574.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Temple Bell-SoundBible.com-756181215.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

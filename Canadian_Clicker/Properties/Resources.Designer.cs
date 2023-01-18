@@ -61,12 +61,57 @@ namespace Canadian_Clicker.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Button_Push_Mike_Koenig_1659525069 {
+            get {
+                return ResourceManager.GetStream("Button_Push_Mike_Koenig_1659525069", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Click2_Sebastian_759472264 {
+            get {
+                return ResourceManager.GetStream("Click2_Sebastian_759472264", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Door_Close_SoundBible_com_1305692306 {
+            get {
+                return ResourceManager.GetStream("Door_Close_SoundBible_com_1305692306", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Maple_leaf_transparent {
             get {
                 object obj = ResourceManager.GetObject("Maple_leaf_transparent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Radio_Static_SoundBible_com_629277574 {
+            get {
+                return ResourceManager.GetStream("Radio_Static_SoundBible_com_629277574", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Temple_Bell_SoundBible_com_756181215 {
+            get {
+                return ResourceManager.GetStream("Temple_Bell_SoundBible_com_756181215", resourceCulture);
             }
         }
     }

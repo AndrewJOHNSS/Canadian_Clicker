@@ -118,7 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Button_Push_Mike_Koenig_1659525069" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button_Push-Mike_Koenig-1659525069.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Click2_Sebastian_759472264" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Click2-Sebastian-759472264.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Door_Close_SoundBible_com_1305692306" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Door Close-SoundBible.com-1305692306.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Maple_leaf_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Maple_leaf_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Radio_Static_SoundBible_com_629277574" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Radio Static-SoundBible.com-629277574.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Temple_Bell_SoundBible_com_756181215" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Temple Bell-SoundBible.com-756181215.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
