@@ -35,12 +35,15 @@ namespace Canadian_Clicker
 
         int finaladd;
         int finalupgrade;
+        int finalcost;
 
         int igloovalue = 25;
         int plowvalue = 50;
         int timsvalue = 100;
         int hockeyvalue = 150;
         int ridervalue = 250;
+
+        int clickerpowerup = 1000;
 
         SoundPlayer button1sound = new SoundPlayer(Properties.Resources.Door_Close_SoundBible_com_1305692306);
         SoundPlayer button2sound = new SoundPlayer(Properties.Resources.Button_Push_Mike_Koenig_1659525069);
@@ -62,6 +65,7 @@ namespace Canadian_Clicker
             numberoftimsLabel.Text = $"Cost:{timsvalue}  Total Owned:{timsamount}";
             numberofhockeyLabel.Text =  $"Cost:{hockeyvalue}  Total Owned:{hockeyamount}";
             numberofmooseLabel.Text = $"Cost:{ridervalue}   Total Owned:{rideramount}";
+            powerup2Xlabel.Text = $"2x CLICK POWER: {clickerpowerup}eh?'s";
 
             clickpowerLabel.Text = $"Click POWER: {clickerpower}";
 
@@ -112,6 +116,8 @@ namespace Canadian_Clicker
                 finaladd = Ehamount;
                 Ehamount = finaladd - igloovalue;
                 button1sound.Play();
+                finalcost = igloovalue;
+                igloovalue = finalcost * 2;
             }
         }
 
@@ -123,6 +129,8 @@ namespace Canadian_Clicker
                 finaladd = Ehamount;
                 Ehamount = finaladd - plowvalue;
                 button1sound.Play();
+                finalcost = plowvalue;
+                plowvalue = finalcost * 2;
             }
         }
 
@@ -134,6 +142,8 @@ namespace Canadian_Clicker
                 finaladd = Ehamount;
                 Ehamount = finaladd - timsvalue;
                 button1sound.Play();
+                finalcost = timsvalue;
+                timsvalue = finalcost * 2;
             }
         }
 
@@ -145,6 +155,8 @@ namespace Canadian_Clicker
                 finaladd = Ehamount;
                 Ehamount = finaladd - hockeyvalue;
                 button1sound.Play();
+                finalcost = hockeyvalue;
+                hockeyvalue = finalcost * 2;
             }
         }
 
@@ -156,18 +168,22 @@ namespace Canadian_Clicker
                 finaladd = Ehamount;
                 Ehamount = finaladd - ridervalue;
                 button1sound.Play();
+                finalcost = ridervalue;
+                ridervalue = finalcost * 2;
             }
         }
 
         private void powerup2Xlabel_Click(object sender, EventArgs e)
         {
-            if (Ehamount >= 1000)
+            if (Ehamount >= clickerpowerup)
             {
                 finaladd = Ehamount;
                 Ehamount = finaladd - 1000;
                 finalupgrade = clickerpower * 2;
                 clickerpower = finalupgrade;
                 button1sound.Play();
+                finalcost = clickerpowerup;
+                clickerpowerup = finalcost * 2;
             }
             if (clickerpower == 512)
             {
@@ -241,11 +257,35 @@ namespace Canadian_Clicker
             timspower = 20;
             hockeypower = 50;
             riderpower = 200;
+            igloovalue = 25;
+            plowvalue = 50;
+            timsvalue = 100;
+            hockeyvalue = 150;
+            ridervalue = 250;
+            clickerpowerup = 1000;
             powerupIglooLabel.Enabled = true;
             timsMilkAndSugar2X.Enabled = true;
             hockeypowerupLabel.Enabled = true;
             floridianMooseRider10x.Enabled=true;
             powerup2Xlabel.Enabled=true;
+            powerupIglooLabel.Visible = true;
+            timsMilkAndSugar2X.Visible = true;
+            hockeypowerupLabel.Visible = true;
+            floridianMooseRider10x.Visible = true;
+            powerup2Xlabel.Visible = true;
+            numberofhockeyLabel.Visible = true;
+            numberofiglooLabel.Visible = true;
+            numberofmooseLabel.Visible = true;
+            numberofsnowplowLabel.Visible = true;
+            numberoftimsLabel.Visible = true;
+            buyhockeyplayerButton.Visible = true;
+            buyiglooButton.Visible = true;
+            buymooseriderButton.Visible = true;
+            buysnowplowButton.Visible = true;
+            buytimsButton.Visible = true;
+            winButton.Visible = true;
+            endprogramButton.Visible = false;
+            endprogramButton.Enabled = false;
             staticsound.Play();
         }
 
@@ -253,7 +293,7 @@ namespace Canadian_Clicker
         {
             if (Ehamount >= 100000000 && clickerpower == 512)
             {
-                costtowinLabel.Text = $"What was the point? like, are you THAT bored? Congrats, you are a Canadian";
+                costtowinLabel.Text = $"What was the point? like, are you THAT bored? Congrats, you are a Canadian.";
                 powerupIglooLabel.Visible = false;
                 timsMilkAndSugar2X.Visible = false;
                 hockeypowerupLabel.Visible = false;

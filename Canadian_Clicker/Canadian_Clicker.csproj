@@ -98,5 +98,8 @@
   <ItemGroup>
     <None Include="Resources\Temple Bell-SoundBible.com-756181215.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
