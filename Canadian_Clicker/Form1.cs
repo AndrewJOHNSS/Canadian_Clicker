@@ -38,10 +38,10 @@ namespace Canadian_Clicker
         int finalcost;
 
         int igloovalue = 25;
-        int plowvalue = 50;
-        int timsvalue = 100;
-        int hockeyvalue = 150;
-        int ridervalue = 250;
+        int plowvalue = 150;
+        int timsvalue = 355;
+        int hockeyvalue = 606;
+        int ridervalue = 1812;
 
         int clickerpowerup = 1000;
 
@@ -178,12 +178,13 @@ namespace Canadian_Clicker
             if (Ehamount >= clickerpowerup)
             {
                 finaladd = Ehamount;
-                Ehamount = finaladd - 1000;
+                Ehamount = finaladd - clickerpowerup;
+                finalupgrade = clickerpowerup * 2;
+                clickerpowerup = finalupgrade;
                 finalupgrade = clickerpower * 2;
                 clickerpower = finalupgrade;
                 button1sound.Play();
-                finalcost = clickerpowerup;
-                clickerpowerup = finalcost * 2;
+                
             }
             if (clickerpower == 512)
             {
@@ -258,10 +259,10 @@ namespace Canadian_Clicker
             hockeypower = 50;
             riderpower = 200;
             igloovalue = 25;
-            plowvalue = 50;
-            timsvalue = 100;
-            hockeyvalue = 150;
-            ridervalue = 250;
+            plowvalue = 150;
+            timsvalue = 355;
+            hockeyvalue = 606;
+            ridervalue = 1812;
             clickerpowerup = 1000;
             powerupIglooLabel.Enabled = true;
             timsMilkAndSugar2X.Enabled = true;
@@ -286,6 +287,7 @@ namespace Canadian_Clicker
             winButton.Visible = true;
             endprogramButton.Visible = false;
             endprogramButton.Enabled = false;
+            costtowinLabel.Text = $"Power: 512 and 100,000,000 extra eh?'s to truly be Canadian";
             staticsound.Play();
         }
 
