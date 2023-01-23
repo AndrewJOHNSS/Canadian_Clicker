@@ -52,6 +52,7 @@
             this.winButton = new System.Windows.Forms.Button();
             this.costtowinLabel = new System.Windows.Forms.Label();
             this.endprogramButton = new System.Windows.Forms.Button();
+            this.clickbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // scoreLabel
@@ -277,12 +278,23 @@
             this.endprogramButton.UseVisualStyleBackColor = true;
             this.endprogramButton.Click += new System.EventHandler(this.endprogramButton_Click);
             // 
+            // clickbutton
+            // 
+            this.clickbutton.Location = new System.Drawing.Point(210, 320);
+            this.clickbutton.Name = "clickbutton";
+            this.clickbutton.Size = new System.Drawing.Size(75, 23);
+            this.clickbutton.TabIndex = 22;
+            this.clickbutton.Text = "CLICK";
+            this.clickbutton.UseVisualStyleBackColor = true;
+            this.clickbutton.Click += new System.EventHandler(this.clickbutton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(507, 450);
+            this.Controls.Add(this.clickbutton);
             this.Controls.Add(this.endprogramButton);
             this.Controls.Add(this.costtowinLabel);
             this.Controls.Add(this.winButton);
@@ -305,6 +317,8 @@
             this.Controls.Add(this.powerup2Xlabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.mapleLeafImage);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Canadian Clicker";
             this.ResumeLayout(false);
@@ -337,6 +351,7 @@
         private System.Windows.Forms.Button winButton;
         private System.Windows.Forms.Label costtowinLabel;
         private System.Windows.Forms.Button endprogramButton;
+        private System.Windows.Forms.Button clickbutton;
     }
 }
 

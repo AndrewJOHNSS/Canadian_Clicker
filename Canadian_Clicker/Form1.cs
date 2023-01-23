@@ -69,6 +69,7 @@ namespace Canadian_Clicker
 
             clickpowerLabel.Text = $"Click POWER: {clickerpower}";
 
+
             if (iglooamount >= 0)
             {
                 iglooadded = iglooamount * igloopower;
@@ -287,6 +288,8 @@ namespace Canadian_Clicker
             winButton.Visible = true;
             endprogramButton.Visible = false;
             endprogramButton.Enabled = false;
+            clickbutton.Visible = true;
+            clickbutton.Enabled = true;
             costtowinLabel.Text = $"Power: 512 and 100,000,000 extra eh?'s to truly be Canadian";
             staticsound.Play();
         }
@@ -314,6 +317,8 @@ namespace Canadian_Clicker
                 winButton.Visible = false;
                 endprogramButton.Visible = true;
                 endprogramButton.Enabled = true;
+                clickbutton.Visible = false;
+                clickbutton.Enabled = false;
                 templebellsound.Play();
             }
         }
@@ -321,6 +326,13 @@ namespace Canadian_Clicker
         private void endprogramButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void clickbutton_Click(object sender, EventArgs e)
+        {
+            finaladd = Ehamount;
+            Ehamount = finaladd + clickerpower;
+            button3sound.Play();
         }
     }
 }
