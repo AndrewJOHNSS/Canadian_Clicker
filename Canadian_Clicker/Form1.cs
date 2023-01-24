@@ -55,6 +55,8 @@ namespace Canadian_Clicker
             InitializeComponent();
             endprogramButton.Enabled = false;
             endprogramButton.Visible = false;
+            resetButton.Enabled = false;
+            resetButton.Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -290,6 +292,8 @@ namespace Canadian_Clicker
             endprogramButton.Enabled = false;
             clickbutton.Visible = true;
             clickbutton.Enabled = true;
+            resetButton.Visible = false;
+            resetButton.Enabled = false;
             costtowinLabel.Text = $"Power: 512 and 100,000,000 extra eh?'s to truly be Canadian";
             staticsound.Play();
         }
@@ -319,6 +323,8 @@ namespace Canadian_Clicker
                 endprogramButton.Enabled = true;
                 clickbutton.Visible = false;
                 clickbutton.Enabled = false;
+                resetButton.Enabled = true;
+                resetButton.Visible = true;
                 templebellsound.Play();
             }
         }
